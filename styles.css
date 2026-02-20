@@ -144,6 +144,10 @@ body {
   background-color: #e9e5dd;
 }
 
+b {
+  font-weight: bold;
+}
+
 header {
   z-index: 2;
   position: fixed;
@@ -163,6 +167,10 @@ header a {
   padding: 6px 0;
   font-size: 22px;
   color: #000;
+}
+
+header a:hover {
+  color: #2b6894;
 }
 
 header .container {
@@ -206,16 +214,18 @@ main .container {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 46px;
+  margin: 0 0 20px 0;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 32px;
+  margin: 0 0 1em 0;
 }
 
 section {
   position: relative;
-  padding: 20px 24px 10px 24px;
+  padding: 24px 32px 10px 32px;
   margin: 0 0 30px 0;
 }
 
@@ -233,64 +243,82 @@ section::after {
   border-radius: 8px;
 }
 
-p,
-ul {
+p {
   font-size: 16px;
   margin: 0 0 1em 0;
-  line-height: 1.2em;
+  line-height: 1.4em;
 }
 
-/* .container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-} */
-
-/* header {
-  background: #333;
-  color: #fff;
-  padding-top: 30px;
-  min-height: 70px;
-  border-bottom: #0779e4 3px solid;
-} */
-
-/* header a {
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
+section ul {
   font-size: 16px;
-} */
+  margin: 0 0 1em 0;
+  line-height: 1.4em;
+  list-style: disc inside;
+}
 
-/* nav {
-  float: right;
-  margin-top: 10px;
-} */
+section li {
+  margin: 0 0 0.5em 0;
+}
 
-/* nav ul {
-  list-style: none;
-} */
-
-/* nav ul li {
-  display: inline;
-  margin-left: 20px;
-} */
-
-/* nav ul li a {
-  color: #fff;
-  text-decoration: none;
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  margin: 0 0 1em 0;
   font-size: 16px;
-} */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
 
-/* section {
-  padding: 20px;
-  background: #fff;
-  margin-top: 20px;
-} */
+input[type="submit"] {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 0 3px 0;
+  font-size: 16px;
+  color: #2e2c24;
+  background-color: #e9e5dd;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-/* footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  margin-top: 20px;
-} */
+.tip {
+  font-size: 12px;
+  color: #666;
+}
+
+@media screen and (max-width: 860px) {
+  header {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: block;
+    text-align: center;
+  }
+
+  header .container {
+    width: 100%;
+    max-width: none;
+    padding: 12px 0;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  main {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  main .container {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+    max-height: none;
+    overflow-y: visible;
+  }
+}
